@@ -50,10 +50,10 @@ $conn->close();
 <body>
 
  <section id="admin_main_section">
-  <div class="container">
-   <div class="row pt-5">
+  <div class="container centered-form">
+   <div class="row">
     <div class="col-md-6"></div>
-    <div class="col-md-6 bg-light rounded p-5">
+    <div class="col-md-6 bg-light rounded p-4 login-form">
      <h2 class="mb-4">Admin Login</h2>
      <form method="post" action="admin_login.php">
       <div class="mb-3">
