@@ -1,39 +1,39 @@
+<!-- Trijit/index.php -->
 <?php
-//include('../templates/header.php');
+// Include the database connection code if not already included
+include_once("utils/connection.php");
+
+// Retrieve products from the database
+$productsQuery = "SELECT * FROM products";
+$productsResult = $conn->query($productsQuery);
+
+// Close the connection
+$conn->close();
 ?>
 
-<div class="content">
-    <h2>Available VPS Plans</h2>
-    <ul class="vps-list">
-        <li>
-            <h3>Basic Plan</h3>
-            <p>Price: $20/month</p>
-            <a href="order_form.php?plan=Basic">Order Now</a>
-        </li>
-        <li>
-            <h3>Standard Plan</h3>
-            <p>Price: $40/month</p>
-            <a href="order_form.php?plan=Standard">Order Now</a>
-        </li>
-        <li>
-            <h3>Advanced Plan</h3>
-            <p>Price: $60/month</p>
-            <a href="order_form.php?plan=Advanced">Order Now</a>
-        </li>
-    </ul>
-</div>
-<div class="content2">
-    <h2>Create Your Own VPS Plan</h2>
-    <form action="order_form.php" method="get">
-        <label for="ram">RAM (GB):</label>
-        <input type="number" name="ram" required>
-        <label for="cores">CPU Cores:</label>
-        <input type="number" name="cores" required>
-        <label for="storage">Storage (GB):</label>
-        <input type="number" name="storage" required>
-        <button type="submit">Create Plan</button>
-    </form>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+
+<h2>Products</h2>
 <?php
-//include('../templates/footer.php');
+if ($productsResult->num_rows > 0) {
+    while ($row = $productsResult->fetch_assoc()) {
+        echo "<h3>" . $row["vps_name"] . "</h3>";
+        echo "<p>Number of Cores: " . $row["num_cores"] . "</p>";
+        echo "<p>RAM in GB: " . $row["ram_gb"] . "</p>";
+        echo "<p>Storage in GB: " . $row["storage_gb"] . "</p>";
+        echo "<p>Price: $" . $row["price"] . "</p>";
+        echo "<p>Description: " . $row["description"] . "</p>";
+        echo "<hr>";
+    }
+} else {
+    echo "No products available.";
+}
 ?>
+
+</body>
+</html>

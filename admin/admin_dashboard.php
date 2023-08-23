@@ -29,6 +29,7 @@ if (date("H") < 12) {
 <h2>Admin Dashboard</h2>
 <p><?php echo $greeting; ?> <?php echo $adminName; ?>!</p>
 <p>Current time: <?php echo $currentTime; ?></p>
+<p><a href="add_product.php">Add New Product</a></p>
 <p><a href="admin_logout.php">Logout</a></p>
 
 </body>
