@@ -34,19 +34,48 @@ $conn->close();
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Admin Login</title>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Admin Login</title>
+ <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+ <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+ <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css.map">
+ <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css.map">
+ <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
 
-<h2>Admin Login</h2>
-<form method="post" action="admin_login.php">
-    <label for="username">Username:</label>
-    <input type="text" name="username" required><br>
-    <label for="password">Password:</label>
-    <input type="password" name="password" required><br>
-    <input type="submit" value="Login">
-</form>
+ <section id="admin_main_section">
+  <div class="container">
+   <div class="row pt-5">
+    <div class="col-md-6"></div>
+    <div class="col-md-6 bg-light rounded p-5">
+     <h2 class="mb-4">Admin Login</h2>
+     <form method="post" action="admin_login.php">
+      <div class="mb-3">
+       <label for="username" class="form-label">Username:</label>
+       <input type="text" class="form-control" name="username" required>
+      </div>
+      <div class="mb-3">
+       <label for="password" class="form-label">Password:</label>
+       <input type="password" class="form-control" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+     </form>
+    </div>
+   </div>
+  </div>
+ </section>
 
+
+ <script src="./assets/bootstrap/js/bootstrap.js"></script>
+ <script src="./assets/bootstrap/js/bootstrap.js.map"></script>
+ <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+ <script src="./assets/bootstrap/js/bootstrap.min.js.map"></script>
 </body>
+
 </html>
