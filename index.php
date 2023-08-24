@@ -14,7 +14,7 @@ $conn->close();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Products</title>
+    <title>Home</title>
 </head>
 <body>
 
