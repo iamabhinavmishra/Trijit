@@ -8,14 +8,17 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Admin_login starts*/
+
 #admin_main_section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-    url("https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=1060&t=st=1692786060~exp=1692786660~hmac=4de4ae251e772e1f4a8f99b8cb832f586e5743bfb8b91f1920e8e16380e2d613");
+    url("../images/admin_bg.avif");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
+
 .centered-form {
   display: flex;
   align-items: center;
@@ -24,7 +27,7 @@ body {
 }
 .login-form {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #3d3a3a;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);

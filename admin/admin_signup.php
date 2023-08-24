@@ -19,7 +19,7 @@ $createTableQuery = "
 ";
 
 if ($conn->query($createTableQuery) === TRUE) {
-    echo "Table '$tableName' created or already exists.<br>";
+    // echo "Table '$tableName' created or already exists.<br>";
 } else {
     echo "Error creating table: " . $conn->error . "<br>";
 }
@@ -51,25 +51,62 @@ $conn->close();
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Admin Signup</title>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Admin Signup</title>
+
+ <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+ <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+ <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css.map">
+ <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css.map">
+ <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
 
-<h2>Admin Signup</h2>
-<form method="post" action="">
-    <label for="first_name">First Name:</label>
-    <input type="text" name="first_name" required><br>
-    <label for="last_name">Last Name:</label>
-    <input type="text" name="last_name" required><br>
-    <label for="designation">Designation:</label>
-    <input type="text" name="designation" required><br>
-    <label for="username">Username:</label>
-    <input type="text" name="username" required><br>
-    <label for="password">Password:</label>
-    <input type="password" name="password" required><br>
-    <input type="submit" value="Sign Up">
-</form>
+ <section id="admin_main_section">
+  <div class="container centered-form">
+   <div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6 bg-light rounded p-4 login-form">
+     <h2>Admin Signup</h2>
+     <form method="post" action="">
+      <div class="form-group">
+       <label for="first_name" class="form-label">First Name:</label>
+       <input type="text" class="form-control" name="first_name" required>
+      </div>
+      <div class="form-group">
+       <label for="last_name" class="form-label">Last Name:</label>
+       <input type="text" class="form-control" name="last_name" required>
+      </div>
+      <div class="form-group">
+       <label for="designation" class="form-label">Designation:</label>
+       <input type="text" class="form-control" name="designation" required>
+      </div>
+      <div class="form-group">
+       <label for="username" class="form-label">Username:</label>
+       <input type="text" class="form-control" name="username" required>
+      </div>
+      <div class="form-group">
+       <label for="password" class="form-label">Password:</label>
+       <input type="password" class="form-control" name="password" required>
+      </div>
+      <div class="form-group">
+       <input type="submit" class="btn btn-primary mt-3" value="Sign Up">
+      </div>
+     </form>
+    </div>
+   </div>
+  </div>
+ </section>
 
+ <script src="../assets/bootstrap/js/bootstrap.js"></script>
+ <script src="../assets/bootstrap/js/bootstrap.js.map"></script>
+ <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+ <script src="../assets/bootstrap/js/bootstrap.min.js.map"></script>
 </body>
+
 </html>

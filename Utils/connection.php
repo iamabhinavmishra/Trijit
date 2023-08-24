@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>MySQL Connection Test</title>
+</head>
+<body> -->
+
+>>>>>>> origin/ui
 <?php
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
@@ -20,3 +30,9 @@ if ($conn->connect_error) {
 // Remember to close the connection when you're done:
 
 ?>
+<<<<<<< HEAD
+=======
+
+<!-- </body>
+</html> -->
+>>>>>>> origin/ui
