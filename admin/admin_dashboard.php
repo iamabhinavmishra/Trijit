@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["first_name"])) {
-    header("Location: admin_login.php");
+    header("Location: ../admin_login.php");
     exit();
 }
 
@@ -31,6 +31,7 @@ if (date("H") < 12) {
 <p>Current time: <?php echo $currentTime; ?></p>
 <p><a href="add_product.php">Add New Product</a></p>
 <p><a href="admin_logout.php">Logout</a></p>
+<p><a href="manage_prices.php">Manage Prices</a></p>
 
 </body>
 </html>
