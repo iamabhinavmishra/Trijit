@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>MySQL Connection Test</title>
 </head>
-<body>
+<body> -->
 
 <?php
 //error_reporting(E_ALL);
@@ -28,5 +28,5 @@ if ($conn->connect_error) {
 
 ?>
 
-</body>
-</html>
+<!-- </body>
+</html> -->
